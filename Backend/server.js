@@ -10,7 +10,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-  res.send("Welcome To Bug Tracker App");
+  res.send("Welcome To Loseit website");
 });
 
 // Signup Route

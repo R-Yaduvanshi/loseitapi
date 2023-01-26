@@ -5,7 +5,7 @@ const { UserModel } = require("../models/User.models");
 
 // Signup
 const signup = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, name, age, weight } = req.body;
   const user = await UserModel.findOne({ email });
   //   console.log(user);
 
@@ -20,6 +20,9 @@ const signup = async (req, res) => {
       const new_user = new UserModel({
         email,
         password: hash,
+        name,
+        age,
+        weight,
       });
 
       try {
